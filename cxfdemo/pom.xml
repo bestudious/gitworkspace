@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.dlstone.cxf</groupId>
+  <artifactId>cxfdemo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>cxfdemo</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+<!-- 本地服务 需要三个-->    
+<dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>3.1.6</version>
+</dependency>
+ <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>3.1.6</version>
+</dependency>
+<!-- jetty 本地运行需要 -->
+<!-- <dependency>
+        <groupId>org.apache.cxf</groupId>
+       <artifactId>cxf-rt-transports-http-jetty</artifactId>
+       <version>3.1.6</version>
+       在tomcat中运行需要排除依赖，本地不需要，
+       <exclusions>
+                 <exclusion>
+                       <groupId>javax.servlet</groupId>
+                       <artifactId>javax.servlet-api</artifactId>
+                 </exclusion>
+            </exclusions>
+</dependency>  -->
+
+<!-- 如果与spring集成则需要以下，否则不需要 -->
+ <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.1.9.RELEASE</version>
+ </dependency>
+ <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.1.9.RELEASE</version>
+  </dependency>
+ <!--  <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>9.2.15.v20160210</version>
+ </dependency> -->
+    
+  </dependencies>
+</project>
